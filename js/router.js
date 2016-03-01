@@ -4,26 +4,20 @@ function ($, _, Backbone, DefaultView) {
     routes: {
       'about': 'aboutAction',
       'contact': 'contactAction',
-      // if first ones are true others will load, that's why * is there
-      '*other': 'defaultAction',
+      '*other': 'defaultAction'
     }
   });
   var initialize = function () {
     var siteRouter = new SiteRouter();
+    var defaultView = new DefaultView();
     siteRouter.on('route:defaultAction', function(){
-      var defaultView = new DefaultView();
-      defaultView.render();
-      console.log('default');
+      defaultView.render('main');
     });
     siteRouter.on('route:aboutAction', function(){
-      var defaultView = new DefaultView();
-      defaultView.render();
-      console.log('about');
+      defaultView.render('about');
     });
     siteRouter.on('route:contactAction', function(){
-      var defaultView = new DefaultView();
-      defaultView.render();
-      console.log('contact');
+      defaultView.render('contact');
     });
     Backbone.history.start();
   };
