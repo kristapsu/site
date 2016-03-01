@@ -1,8 +1,8 @@
 {
   "name": "site",
-  "homepage": "https://github.com/kristapsu/site",
+  "homepage": "https://github.com/jankosacc/site",
   "authors": [
-    "kristapsu <steinbergs.kristaps@gmail.com>"
+    "jankos <janis.koselevs@gmail.com>"
   ],
   "description": "",
   "main": "index.html",
